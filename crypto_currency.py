@@ -1,13 +1,12 @@
 class Crypto:
-    def __init__(
-        self, name, value, trend_24h, trend_24h_value, trend_7d, trend_7d_value
-    ) -> None:
+    def __init__(self, name, price, pct_1h, pct_24h, pct_7d) -> None:
         self.name = name
-        self.value = value
-        self.trend_24h = trend_24h
-        self.trend_24h_value = trend_24h_value
-        self.trend_7d = trend_7d
-        self.trend_7d_value = trend_7d_value
+        self.price = price
+        self.pct_1h = pct_1h
+        self.pct_24h = pct_24h
+        self.pct_7d = pct_7d
 
     def __str__(self) -> str:
-        return f"{self.name}, {self.value}, 24H: {self.trend_24h} {self.trend_24h_value}, 7D: {self.trend_7d} {self.trend_7d_value}"
+        return (
+            f"{self.name}, {self.price}, {self.pct_1h}, {self.pct_24h}, {self.pct_7d}"
+        )
